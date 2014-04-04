@@ -1,0 +1,20 @@
+В этом семестре у всех моих групп задания задаются на английском, так что:
+
+do the simple web-application using servlets for handling math operations
+
+for example you put in browser the string like
+
+.../math?oper=add&arg1=12&arg2=24
+
+and you see in browser the result (36 for the example above)
+
+necessary operations:
+ - unary: sin, cos, ln, exp
+ - binary: add, sub, mult, div (+,-,*,/ in english)
+
+you should check two things:
+ - arguments should be valid (sin for string ab#s7% is stupid)
+ - arguments should be fine according to domain of function (not <=0 for log and so on)
+ - arguments should be (it can't happen that you have only 1 argument for addidion)
+
+all exceptions as mentioned above must be handled, saying to user in browser what he must change in URL-string for correct operation.
