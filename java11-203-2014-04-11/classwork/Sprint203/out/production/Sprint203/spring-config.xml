@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="maxprog" class="Program" init-method="addDate">
+        <property name="sourceCode" value="m = max(a,b);"/>
+    </bean>
+
+    <bean id="minprog" class="Program" init-method="addDate">
+        <property name="sourceCode" value="m = min(a,b);"/>
+    </bean>
+
+
+    <bean id="progger1" class="Progger">
+        <property name="name" value="Marat"/>
+        <property name="programs">
+            <list>
+                <ref bean="maxprog"/>
+                <ref bean="minprog"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="progger2" class="Progger">
+        <property name="name" value="Yura"/>
+        <property name="programs">
+            <list>
+                <ref bean="minprog"/>
+                <ref bean="maxprog"/>
+
+            </list>
+        </property>
+    </bean>
+
+
+
+
+</beans>
